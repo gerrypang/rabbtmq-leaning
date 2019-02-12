@@ -1,23 +1,14 @@
 ### RabbitMQ 优缺点对比 
+
 优点：
-
 1、开源（代码版本更新快、社区活跃）、性能优秀（采用高效Erlang语言开发）、稳定性有保障
-
 2、提供可靠性投递模式confirm模式、return模式等，以及表达式配置
-
 3、与Spring AMQP 完美整合，spring提供了丰富的api
-
 4、保证数据不丢失前提下做到高可靠性，高可用性，可以提供集群模式、HA模式、镜像队列模式
-
 5、具有功能强大的功能管理页面
-
 6、支持多种语言
-
 缺点：
-
 1、超大规模并发情况下逊于Kafka和RocketMQ
-
-
 
 ### AMQP（Advice Message Queuing Protocol）高级消息队列协议
 
