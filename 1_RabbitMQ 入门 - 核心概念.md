@@ -1,18 +1,28 @@
 ### RabbitMQ 优缺点对比 
 优点：
+
 1、开源（代码版本更新快、社区活跃）、性能优秀（采用高效Erlang语言开发）、稳定性有保障
+
 2、提供可靠性投递模式confirm模式、return模式等，以及表达式配置
+
 3、与Spring AMQP 完美整合，spring提供了丰富的api
+
 4、保证数据不丢失前提下做到高可靠性，高可用性，可以提供集群模式、HA模式、镜像队列模式
+
 5、具有功能强大的功能管理页面
+
 6、支持多种语言
 
 缺点：
+
 1、超大规模并发情况下逊于Kafka和RocketMQ
 
 
+
 ### AMQP（Advice Message Queuing Protocol）高级消息队列协议
+
 AMQP核心概念：可以把消息传递的过程想象成:当你将一个包裹送到邮局，邮局会暂存并最终将邮件通过邮递员送到收件人的手上， AMQP协议就好比由邮局、邮箱和邮递员组成的一个系统。
+
 - producer：生产者（发件人），消息的投递方
 - comsumer：消费者（收件人），消息的消费方
 - connection：网络连接，应用程序与broker之间网络连接
@@ -29,9 +39,12 @@ AMQP核心概念：可以把消息传递的过程想象成:当你将一个包裹
 
 ### 消息是怎么流转？
 step1：生产者将消息发送到指定的exchange，并指定消息的routing key
+
 step2：消费者将queue绑定到相关exchange上
+
 step3：消费者监听queue，获取并消费路由到queue上的消息
-重点：生产者和消费者之间，最主要是通过exchangge和queue之间的routing key进行解耦
+
+**重点：生产者和消费者之间，最主要是通过exchangge和queue之间的routing key进行解耦**
 
 
 ### 交换机属性
