@@ -1,4 +1,4 @@
-package com.gerry.pang.producer;
+package com.gerry.pang.consumer;
 
 import java.io.IOException;
 import java.util.Map;
